@@ -96,7 +96,7 @@ Rejoin.TextWrapped = true
 
 -- Scripts:
 
-local function FABELQA_fake_script() -- Close.ToggleMenu 
+local function LNIX_fake_script() -- Close.ToggleMenu 
 	local script = Instance.new('LocalScript', Close)
 
 	local menu = script.Parent.Parent.Menu
@@ -109,8 +109,8 @@ local function FABELQA_fake_script() -- Close.ToggleMenu
 		end
 	end)
 end
-coroutine.wrap(FABELQA_fake_script)()
-local function LXTG_fake_script() -- Close.Drag 
+coroutine.wrap(LNIX_fake_script)()
+local function ZKBE_fake_script() -- Close.Drag 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent
@@ -118,15 +118,12 @@ local function LXTG_fake_script() -- Close.Drag
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(LXTG_fake_script)()
-local function UJECHRS_fake_script() -- AutoFarm.AutoFarmScript 
+coroutine.wrap(ZKBE_fake_script)()
+local function KVKUINW_fake_script() -- AutoFarm.AutoFarmScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	local autofarm = script.Parent
 	local autogem = script.Parent.Parent.AutoGem
-	local a = 1
-	local b = 2
-	local c = 3
 	local Toggle1 = false
 	
 	local runService = game:GetService("RunService")runService.RenderStepped:Connect(function()	
@@ -160,15 +157,12 @@ local function UJECHRS_fake_script() -- AutoFarm.AutoFarmScript
 		end
 		 end)
 end
-coroutine.wrap(UJECHRS_fake_script)()
-local function DSZMJD_fake_script() -- AutoGem.AutoGemScript 
+coroutine.wrap(KVKUINW_fake_script)()
+local function DPLD_fake_script() -- AutoGem.AutoGemScript 
 	local script = Instance.new('LocalScript', AutoGem)
 
 	local autogem = script.Parent
 	local Toggle2 = false
-	local g = 4
-	local c = 5
-	local d = 6
 	autogem.MouseButton1Click:Connect(function()
 		if autogem.BackgroundColor3 == Color3.fromRGB(255,0,0) then
 			 autogem.BackgroundColor3 = Color3.fromRGB(0,255,0)
@@ -195,10 +189,10 @@ local function DSZMJD_fake_script() -- AutoGem.AutoGemScript
 		end
 	end)
 end
-coroutine.wrap(DSZMJD_fake_script)()
-local function KOKUT_fake_script() -- Rejoin.RejoinScript 
+coroutine.wrap(DPLD_fake_script)()
+local function RTZJOXF_fake_script() -- Rejoin.RejoinScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	script.Parent.MouseButton1Click:Connect(function()game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)end)
 end
-coroutine.wrap(KOKUT_fake_script)()
+coroutine.wrap(RTZJOXF_fake_script)()
