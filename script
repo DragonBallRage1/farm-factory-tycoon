@@ -8,7 +8,8 @@ local Close = Instance.new("TextButton")
 local Menu = Instance.new("Frame")
 local AutoFarm = Instance.new("TextButton")
 local AutoGem = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
+local Info = Instance.new("TextLabel")
+local Rejoin = Instance.new("TextButton")
 
 -- Properties:
 
@@ -65,22 +66,37 @@ AutoGem.TextScaled = true
 AutoGem.TextSize = 14.000
 AutoGem.TextWrapped = true
 
-TextLabel.Parent = AutoGem
-TextLabel.BackgroundColor3 = Color3.fromRGB(170, 170, 0)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 7
-TextLabel.Position = UDim2.new(1.05796611, 0, -0.0111784935, 0)
-TextLabel.Size = UDim2.new(0, 120, 0, 64)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Only works when autofarm is on"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+Info.Name = "Info"
+Info.Parent = AutoGem
+Info.BackgroundColor3 = Color3.fromRGB(170, 170, 0)
+Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info.BorderSizePixel = 7
+Info.Position = UDim2.new(1.05796611, 0, -0.0111784935, 0)
+Info.Size = UDim2.new(0, 120, 0, 64)
+Info.Font = Enum.Font.SourceSans
+Info.Text = "Only works when autofarm is on"
+Info.TextColor3 = Color3.fromRGB(0, 0, 0)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextWrapped = true
+
+Rejoin.Name = "Rejoin"
+Rejoin.Parent = Menu
+Rejoin.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rejoin.BorderSizePixel = 7
+Rejoin.Position = UDim2.new(1.05769742, 0, 0.0414378196, 0)
+Rejoin.Size = UDim2.new(0, 119, 0, 63)
+Rejoin.Font = Enum.Font.SourceSans
+Rejoin.Text = "Rejoin"
+Rejoin.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rejoin.TextScaled = true
+Rejoin.TextSize = 14.000
+Rejoin.TextWrapped = true
 
 -- Scripts:
 
-local function KNKEM_fake_script() -- Close.ToggleMenu 
+local function EJDQ_fake_script() -- Close.ToggleMenu 
 	local script = Instance.new('LocalScript', Close)
 
 	local menu = script.Parent.Parent.Menu
@@ -93,8 +109,8 @@ local function KNKEM_fake_script() -- Close.ToggleMenu
 		end
 	end)
 end
-coroutine.wrap(KNKEM_fake_script)()
-local function PTQA_fake_script() -- Close.Drag 
+coroutine.wrap(EJDQ_fake_script)()
+local function BORGSF_fake_script() -- Close.Drag 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent
@@ -102,8 +118,8 @@ local function PTQA_fake_script() -- Close.Drag
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(PTQA_fake_script)()
-local function EPHF_fake_script() -- AutoFarm.Autofarmscript 
+coroutine.wrap(BORGSF_fake_script)()
+local function NHAU_fake_script() -- AutoFarm.AutoFarmScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	local autofarm = script.Parent
@@ -144,8 +160,8 @@ local function EPHF_fake_script() -- AutoFarm.Autofarmscript
 		end
 		 end)
 end
-coroutine.wrap(EPHF_fake_script)()
-local function ZGBY_fake_script() -- AutoGem.AutoGemscript 
+coroutine.wrap(NHAU_fake_script)()
+local function PCIEU_fake_script() -- AutoGem.AutoGemScript 
 	local script = Instance.new('LocalScript', AutoGem)
 
 	local autogem = script.Parent
@@ -175,4 +191,10 @@ local function ZGBY_fake_script() -- AutoGem.AutoGemscript
 		end
 	end)
 end
-coroutine.wrap(ZGBY_fake_script)()
+coroutine.wrap(PCIEU_fake_script)()
+local function PPSW_fake_script() -- Rejoin.RejoinScript 
+	local script = Instance.new('LocalScript', Rejoin)
+
+	game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end
+coroutine.wrap(PPSW_fake_script)()
