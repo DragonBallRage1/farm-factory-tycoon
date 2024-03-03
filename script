@@ -1,0 +1,178 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Close = Instance.new("TextButton")
+local Menu = Instance.new("Frame")
+local AutoFarm = Instance.new("TextButton")
+local AutoGem = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+-- Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Close.Name = "Close"
+Close.Parent = ScreenGui
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 7
+Close.Position = UDim2.new(0.137747332, 0, 0.603813589, 0)
+Close.Size = UDim2.new(0, 93, 0, 50)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Menu.Name = "Menu"
+Menu.Parent = ScreenGui
+Menu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Menu.BackgroundTransparency = 1.000
+Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Menu.BorderSizePixel = 0
+Menu.Position = UDim2.new(0.387366831, 0, 0.296610177, 0)
+Menu.Size = UDim2.new(0, 216, 0, 145)
+
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = Menu
+AutoFarm.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AutoFarm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.BorderSizePixel = 7
+AutoFarm.Position = UDim2.new(0, 0, 0.0414378196, 0)
+AutoFarm.Size = UDim2.new(0, 215, 0, 64)
+AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Text = "AutoFarm"
+AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14.000
+AutoFarm.TextWrapped = true
+
+AutoGem.Name = "AutoGem"
+AutoGem.Parent = Menu
+AutoGem.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AutoGem.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoGem.BorderSizePixel = 7
+AutoGem.Position = UDim2.new(0, 0, 0.55634135, 0)
+AutoGem.Size = UDim2.new(0, 215, 0, 64)
+AutoGem.Font = Enum.Font.SourceSans
+AutoGem.Text = "AutoGem"
+AutoGem.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoGem.TextScaled = true
+AutoGem.TextSize = 14.000
+AutoGem.TextWrapped = true
+
+TextLabel.Parent = AutoGem
+TextLabel.BackgroundColor3 = Color3.fromRGB(170, 170, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 7
+TextLabel.Position = UDim2.new(1.05796611, 0, -0.0111784935, 0)
+TextLabel.Size = UDim2.new(0, 120, 0, 64)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Only works when autofarm is on"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function KNKEM_fake_script() -- Close.ToggleMenu 
+	local script = Instance.new('LocalScript', Close)
+
+	local menu = script.Parent.Parent.Menu
+	local toggle = script.Parent
+	toggle.MouseButton1Click:Connect(function()
+		if menu.Visible == false then
+			menu.Visible = true
+		else
+			menu.Visible = false
+		end
+	end)
+end
+coroutine.wrap(KNKEM_fake_script)()
+local function PTQA_fake_script() -- Close.Drag 
+	local script = Instance.new('LocalScript', Close)
+
+	local frame = script.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(PTQA_fake_script)()
+local function EPHF_fake_script() -- AutoFarm.Autofarmscript 
+	local script = Instance.new('LocalScript', AutoFarm)
+
+	local autofarm = script.Parent
+	local autogem = script.Parent.Parent.AutoGem
+	local a = 1
+	local b = 2
+	local c = 3
+	local Toggle1 = false
+	
+	local runService = game:GetService("RunService")runService.RenderStepped:Connect(function()	
+		if Toggle1 == false then
+			
+			if autogem.Visible == true then
+				autogem.Visible = false
+			end
+		--do nothing
+		else
+			
+			if autogem.Visible == false then
+				autogem.Visible = true
+			end
+			
+		print(a,b,c)
+		
+		end
+		end)
+	
+	
+		 autofarm.MouseButton1Click:Connect(function()
+				--if red then green
+		if autofarm.BackgroundColor3 == Color3.fromRGB(255,0,0) then
+			autofarm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+			Toggle1 = true
+		else
+			-- if not red then red
+			autofarm.BackgroundColor3 = Color3.fromRGB(255,0,0)
+			Toggle1 = false
+		end
+		 end)
+end
+coroutine.wrap(EPHF_fake_script)()
+local function ZGBY_fake_script() -- AutoGem.AutoGemscript 
+	local script = Instance.new('LocalScript', AutoGem)
+
+	local autogem = script.Parent
+	local Toggle2 = false
+	local g = 4
+	local c = 5
+	local d = 6
+	autogem.MouseButton1Click:Connect(function()
+		if autogem.BackgroundColor3 == Color3.fromRGB(255,0,0) then
+			 autogem.BackgroundColor3 = Color3.fromRGB(0,255,0)
+			 Toggle2 = true
+		else
+			autogem.BackgroundColor3 = Color3.fromRGB(255,0,0) 
+			Toggle2 = false
+		end
+	end)
+	
+	local runService = game:GetService("RunService")runService.RenderStepped:Connect(function()
+		if Toggle2 == true then
+			if autogem.Visible == true then
+				print(g,c,d)
+			else
+				-- do nothing
+			end
+		else
+			-- do nothing
+		end
+	end)
+end
+coroutine.wrap(ZGBY_fake_script)()
