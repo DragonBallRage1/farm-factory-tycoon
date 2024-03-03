@@ -96,7 +96,7 @@ Rejoin.TextWrapped = true
 
 -- Scripts:
 
-local function EJDQ_fake_script() -- Close.ToggleMenu 
+local function DKSFBM_fake_script() -- Close.ToggleMenu 
 	local script = Instance.new('LocalScript', Close)
 
 	local menu = script.Parent.Parent.Menu
@@ -109,8 +109,8 @@ local function EJDQ_fake_script() -- Close.ToggleMenu
 		end
 	end)
 end
-coroutine.wrap(EJDQ_fake_script)()
-local function BORGSF_fake_script() -- Close.Drag 
+coroutine.wrap(DKSFBM_fake_script)()
+local function SKKM_fake_script() -- Close.Drag 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent
@@ -118,8 +118,8 @@ local function BORGSF_fake_script() -- Close.Drag
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(BORGSF_fake_script)()
-local function NHAU_fake_script() -- AutoFarm.AutoFarmScript 
+coroutine.wrap(SKKM_fake_script)()
+local function WHBCSM_fake_script() -- AutoFarm.AutoFarmScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	local autofarm = script.Parent
@@ -160,8 +160,8 @@ local function NHAU_fake_script() -- AutoFarm.AutoFarmScript
 		end
 		 end)
 end
-coroutine.wrap(NHAU_fake_script)()
-local function PCIEU_fake_script() -- AutoGem.AutoGemScript 
+coroutine.wrap(WHBCSM_fake_script)()
+local function GVDNSG_fake_script() -- AutoGem.AutoGemScript 
 	local script = Instance.new('LocalScript', AutoGem)
 
 	local autogem = script.Parent
@@ -191,10 +191,10 @@ local function PCIEU_fake_script() -- AutoGem.AutoGemScript
 		end
 	end)
 end
-coroutine.wrap(PCIEU_fake_script)()
-local function PPSW_fake_script() -- Rejoin.RejoinScript 
+coroutine.wrap(GVDNSG_fake_script)()
+local function VJJR_fake_script() -- Rejoin.RejoinScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
-	game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+	script.Parent.MouseButton1Click:Connect(function()game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)end)
 end
-coroutine.wrap(PPSW_fake_script)()
+coroutine.wrap(VJJR_fake_script)()
